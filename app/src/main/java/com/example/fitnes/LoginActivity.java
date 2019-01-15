@@ -39,9 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Сделяль", Toast.LENGTH_LONG);
-                    toast.show();
-                    Users user = new Users(Integer.parseInt(times.getText().toString()),
+                   Users user = new Users(Integer.parseInt(times.getText().toString()),
                             Integer.parseInt(height.getText().toString()),
                             Integer.parseInt(weight.getText().toString()));
                     DBHelper.getInstance(getApplicationContext()).addUsers(user);
