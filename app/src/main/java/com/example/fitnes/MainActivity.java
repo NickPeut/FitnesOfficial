@@ -32,9 +32,8 @@ public class MainActivity extends MvpAppCompatActivity implements IMainView {
         setContentView(R.layout.activity_main);
         Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
         startActivity(intent);
-
-
         presenter.info();
+        presenter.start();
     }
 
 

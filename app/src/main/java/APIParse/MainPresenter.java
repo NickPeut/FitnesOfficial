@@ -23,19 +23,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @InjectViewState
 public class MainPresenter extends MvpPresenter<IMainView> {
 
-
     public void info() {
         getViewState().load();
-
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://wger.de")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
         API api = retrofit.create(API.class);
-
-
         final ArrayList<APIParse.Exercise> arrayList = new ArrayList<>();
 
         for (int i = 1; i < 28; i++) {
