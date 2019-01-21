@@ -25,10 +25,25 @@ public class MainActivity extends MvpAppCompatActivity implements IMainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      //  for(int i = 1; i < 26; i++)
-        presenter.info(1);
-      // Log.d("Size ex", String.valueOf(exercises.size()));
-        //info(bar)
+        /*Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
+        startActivity(intent);*/
+        presenter.info();
+
+
+    }
+
+    @Override
+    public void getExercise(List<Exercise> exercises) {
+
+    }
+
+    @Override
+    public void load() {
+
+    }
+
+    @Override
+    public void error() {
 
     }
 
@@ -37,20 +52,5 @@ public class MainActivity extends MvpAppCompatActivity implements IMainView {
         startActivity(intent);
     }*/
 
-    @Override
-    public void getExercise(ArrayList<Exercise> result) {
 
-        Log.d("My tag", String.valueOf(result.size()));
-        for(Exercise i: result){
-            i.print();
-        }
-    }
-
-    @Override
-    public void error() {
-        Log.d("my tag", "Error");
-    }
-    public void print() {
-
-    }
 }
