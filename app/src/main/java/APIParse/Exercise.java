@@ -1,4 +1,3 @@
-
 package APIParse;
 
 import com.google.gson.annotations.Expose;
@@ -53,6 +52,12 @@ public class Exercise {
 
     public Integer getId() {
         return id;
+    }
+
+    public Exercise(String description, String name) {
+        this.description = description;
+        this.name = name;
+        this.id = 0;
     }
 
     public void setId(Integer id) {
