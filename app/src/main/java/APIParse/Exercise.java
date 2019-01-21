@@ -1,15 +1,21 @@
 package APIParse;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.IntegerRes;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
+@Entity
 public class Exercise {
 
+    @PrimaryKey(autoGenerate = true)
     @SerializedName("id")
     @Expose
     private Integer id;
+
     @SerializedName("license_author")
     @Expose
     private String licenseAuthor;
@@ -167,5 +173,4 @@ public class Exercise {
     public void setEquipment(List<Integer> equipment) {
         this.equipment = equipment;
     }
-
 }

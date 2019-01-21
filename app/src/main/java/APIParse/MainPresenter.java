@@ -5,7 +5,6 @@ import com.arellomobile.mvp.MvpPresenter;
 
 import java.util.List;
 
-
 @InjectViewState
 public class MainPresenter extends MvpPresenter<IMainView> {
 
@@ -24,7 +23,6 @@ public class MainPresenter extends MvpPresenter<IMainView> {
                 getViewState().error();
             }
         });
-
 
     }
 }

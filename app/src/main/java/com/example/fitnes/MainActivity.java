@@ -1,5 +1,6 @@
 package com.example.fitnes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -25,10 +26,9 @@ public class MainActivity extends MvpAppCompatActivity implements IMainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
-        startActivity(intent);*/
+        Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
+        startActivity(intent);
         presenter.info();
-
 
     }
 
@@ -50,7 +50,7 @@ public class MainActivity extends MvpAppCompatActivity implements IMainView {
     /*bar() {
         Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
         startActivity(intent);
-    }*/
-
+    }
+*/
 
 }
