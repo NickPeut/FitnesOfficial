@@ -1,44 +1,39 @@
 package com.example.fitnes;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Button;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import APIParse.Exercise;
-import APIParse.ExerciseList;
 import APIParse.IMainView;
 import APIParse.MainPresenter;
-import retrofit2.Call;
 
 
 public class MainActivity extends MvpAppCompatActivity implements IMainView {
 
     @InjectPresenter
     public MainPresenter presenter;
-
-    private Button btn;
-
+    ArrayList<Exercise> arrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
-        startActivity(intent);
+
+        /*Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
+        startActivity(intent);*/
         presenter.info();
-        presenter.start();
+
+
     }
 
-
     @Override
-    public void getExercise(ArrayList<Exercise> exercises) {
+    public void getExercise(List<Exercise> exercises) {
 
     }
 
@@ -51,4 +46,11 @@ public class MainActivity extends MvpAppCompatActivity implements IMainView {
     public void error() {
 
     }
+
+    /*bar() {
+        Intent intent = new Intent(getApplicationContext(), TrainingChoosing.class);
+        startActivity(intent);
+    }*/
+
+
 }
